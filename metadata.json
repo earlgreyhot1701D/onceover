@@ -1,0 +1,8 @@
+{
+  "name": "Onceover",
+  "description": "An accessibility first-look tool for small business owners.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

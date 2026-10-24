@@ -1,0 +1,38 @@
+{
+  "html-has-lang": {
+    "num": "3.1.1",
+    "name": "Language of Page",
+    "level": "A",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html"
+  },
+  "image-alt": {
+    "num": "1.1.1",
+    "name": "Non-text Content",
+    "level": "A",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html"
+  },
+  "color-contrast": {
+    "num": "1.4.3",
+    "name": "Contrast (Minimum)",
+    "level": "AA",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+  },
+  "label": {
+    "num": "4.1.2",
+    "name": "Name, Role, Value",
+    "level": "A",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html"
+  },
+  "link-name": {
+    "num": "2.4.4",
+    "name": "Link Purpose (In Context)",
+    "level": "A",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html"
+  },
+  "vague-link-text": {
+    "num": "2.4.4",
+    "name": "Link Purpose (In Context)",
+    "level": "A",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html"
+  }
+}

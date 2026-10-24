@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!-- FLAW 1: missing lang -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>La Condesa Baking Company</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,600;0,6..96,700;1,6..96,400&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0;
+      box-shadow: none;
+      text-shadow: none;
+    }
+
+    body {
+      background-color: #FFFFFF;
+      color: #111111;
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .banner {
+      background-color: #111111;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+    }
+
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 24px 64px 24px;
+    }
+
+    header {
+      margin-bottom: 36px;
+      border-bottom: 2px solid #111111;
+      padding-bottom: 24px;
+    }
+
+    h1 {
+      font-family: 'Bodoni Moda', Georgia, serif;
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      color: #111111;
+    }
+
+    .tagline {
+      font-size: 20px;
+      font-style: italic;
+      color: #111111;
+    }
+
+    .accent-panel {
+      background-color: #EFE6E1;
+      padding: 32px;
+      margin: 32px 0;
+    }
+
+    h2 {
+      font-family: 'Bodoni Moda', Georgia, serif;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #111111;
+    }
+
+    ul.menu-list {
+      list-style-type: none;
+      margin-bottom: 20px;
+    }
+
+    ul.menu-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid #D8CFC9;
+      color: #111111;
+    }
+
+    ul.menu-list li:last-child {
+      border-bottom: none;
+    }
+
+    .accent-panel p {
+      color: #111111;
+    }
+
+    .photo-wrapper {
+      margin: 32px 0;
+    }
+
+    .photo-wrapper img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* FLAW 3: low contrast paragraph text (#C9B8B0 on #FFFFFF) */
+    .schedule-note {
+      color: #C9B8B0;
+      font-size: 16px;
+      margin: 24px 0;
+    }
+
+    .newsletter-section {
+      margin: 40px 0;
+    }
+
+    .newsletter-form {
+      margin-top: 16px;
+    }
+
+    .input-field {
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      padding: 10px 12px;
+      font-family: inherit;
+      font-size: 16px;
+      border: 1px solid #111111;
+      background-color: #FFFFFF;
+      color: #111111;
+      margin-bottom: 12px;
+    }
+
+    .submit-button {
+      background-color: #111111;
+      color: #FFFFFF;
+      border: none;
+      padding: 10px 22px;
+      font-family: inherit;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid #111111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links p {
+      color: #111111;
+    }
+
+    .footer-links a {
+      color: #111111;
+      text-decoration: underline;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      color: #111111;
+      text-decoration: none;
+    }
+
+    .social-link svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    Demo page. Not the real La Condesa site.
+  </div>
+
+  <main>
+    <header>
+      <h1>La Condesa</h1>
+      <p class="tagline">Classic American desserts with a little Mexican soul.</p>
+    </header>
+
+    <section class="accent-panel">
+      <h2>Daily Offerings</h2>
+      <ul class="menu-list">
+        <li>Flan</li>
+        <li>Tres leches</li>
+        <li>Oaxacan chocolate cake</li>
+        <li>Mexican wedding cookies</li>
+      </ul>
+      <p>Baked fresh every morning in small batches.</p>
+    </section>
+
+    <div class="photo-wrapper">
+      <!-- FLAW 2: img with no alt attribute -->
+      <img src="concha.jpg">
+    </div>
+
+    <!-- FLAW 3: paragraph with text color #C9B8B0 on #FFFFFF -->
+    <p class="schedule-note">
+      Our morning pastries sell out early. Please visit before noon for the best selection.
+    </p>
+
+    <section class="newsletter-section">
+      <h2>Mailing List</h2>
+      <p>Receive our weekly baking schedule.</p>
+      <form action="#" method="post" class="newsletter-form">
+        <!-- FLAW 4: input with no label, no aria-label, no title, no placeholder -->
+        <input type="email" class="input-field">
+        <button type="submit" class="submit-button">Subscribe</button>
+      </form>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <p>
+          <!-- FLAW 5: link whose only text is click here -->
+          To learn about our ingredients, <a href="#ingredients">click here</a>.
+        </p>
+      </div>
+      <div>
+        <!-- FLAW 6: Instagram link with only an inline SVG icon and no accessible name -->
+        <a href="https://instagram.com" class="social-link">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
